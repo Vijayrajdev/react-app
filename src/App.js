@@ -1,15 +1,17 @@
+import React from 'react'
+import Content from './components/Content'
+import Footer from './components/Footer'
+import Header from './components/Header'
+
 const App = () => {
-  const chores = ["item1", "item2", "item3"];
   return (
     <div>
-      <p>Vijay</p>
-      <ul>
-        {chores.map((chore) => (
-          <li>{chore}</li>
-        ))}
-      </ul>
+      <Header/>
+      <Content/>
+      <Footer/>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
+
