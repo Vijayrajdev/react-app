@@ -6,20 +6,28 @@ const Content = () => {
 
   const handleSubmit = () => {
     setItems((prev) => [...prev, Value]);
+    setValue(" ");
   };
 
   const handleValue = (e) => {
     setValue(e.target.value);
   };
+
+  const handleDelete = (e) => {
+    setItems((prev) => prev.filter((i) => i !== e));
+  };
+
   return (
     <div>
-      <input onChange={handleValue} type="text"></input>
+      <input value={Value} onChange={handleValue} type="text"></input>
       <button type="submit" onClick={handleSubmit}>
         Submit
       </button>
       <ul>
         {Items.map((item) => (
-          <li>{item}</li>
+          <li>
+            {item} <button onClick={() => handleDelete(item)}>Delete</button>
+          </li>
         ))}
       </ul>
     </div>
