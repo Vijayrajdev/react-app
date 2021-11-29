@@ -1,10 +1,9 @@
-const enhance = (Component) => {
-  return () => (
+const enhance = () => {
+  return (
     <div>
-      <h3>Enhanced Component</h3>
-      <Component />
+      
     </div>
-  );
-};
+  )
+}
 
-export default enhance;
+export default enhance

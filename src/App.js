@@ -1,13 +1,10 @@
-import Description from "./components/Description";
-import Footer from "./layouts/Footer";
-import Header from "./layouts/Header";
+import One from "./components/One";
+import "./App.css";
 
 const App = () => {
   return (
     <div>
-      <Header />
-      <Description />
-      <Footer />
+      <One />
     </div>
   );
 };
