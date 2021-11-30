@@ -4,8 +4,16 @@ import App from "./App";
 import { createStore } from "redux";
 import reducer from "./reducer/reducer";
 import { Provider } from "react-redux";
+import { composeWithDevTools } from "redux-devtools-extension";
 
-const store = createStore(reducer);
+const store = createStore(
+  reducer,
+  {
+    product: ["iphone11", "iphone12", "iphone13"],
+    categories: ["Mobiles", "Watches", "Ipods"],
+  },
+  composeWithDevTools()
+);
 
 ReactDOM.render(
   <React.StrictMode>

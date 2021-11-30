@@ -1,19 +1,8 @@
-const initState = [
-  {
-    password: "12345",
-  },
-  {
-    password: "pass123",
-  },
-  {
-    password: "pa234",
-  },
-];
-
-const reducer = (state = initState, action) => {
+const reducer = (state = {}, action) => {
   switch (action.type) {
-    case "ADD_DATA":
-      return [...state, action];
+    case "ADD_PRODUCT":
+      console.log(action);
+      return state;
     default:
       return state;
   }
