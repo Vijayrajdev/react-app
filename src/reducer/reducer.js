@@ -1,9 +1,10 @@
 const reducer = (state = {}, action) => {
   const { type, payload } = action;
   switch (type) {
-    case "ADD_PRODUCT":
-      const { product } = state;
-      return { ...state, product: [...product, payload] };
+    case "ADD_ITEM":
+      return [...state, payload];
+    case "DELETE_ITEM":
+      return state.filter((item) => item.id !== payload);
     default:
       return state;
   }
