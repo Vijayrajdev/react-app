@@ -15,6 +15,7 @@ const Additem = () => {
       },
     };
     dispatch(action);
+    
   };
   return (
     <div>
